@@ -1,28 +1,46 @@
+import React, { useEffect, useState } from 'react';
 
+const Navbar: React.FC = () => {
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const controlNavbar = () => {
+    if(typeof window !== 'undefined') {
+      if(window.scrollY > lastScrollY) {
+        setShowNavbar(false);
+      } else { 
+        setShowNavbar(true);
+      }
+      setLastScrollY(window.scrollY);
+    }
+  };
 
-const Navbar : React.FC = () =>{
-    return (
-        <div className="fixed top-0 left-0 w-full z-20 font-inter">
-            <div className="max-w-7xl mx-auto text-neutral-400 flex items-center h-16">
-                <div className="flex justify-center space-x-10 w-full gap-2"> 
-                    <div className="hover:text-white cursor-pointer transition-colors duration-200" >Introduction</div> 
-             
-                
-                    <div className="hover:text-white cursor-pointer transition-colors duration-200">Resources</div> 
-             
-                
-                    <div className="hover:text-white cursor-pointer transition-colors duration-200">Innovation</div> 
-             
-                
-                    <div className="hover:text-white cursor-pointer transition-colors duration-200">Participate</div> 
-             
-               
-                    <div className="hover:text-white cursor-pointer transition-colors duration-200">FAQs</div> 
-             </div>
-            </div>
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
 
-        </div>
-    )
-}
+  return (
+    <div
+      className={`fixed w-full font-inter transition-transform duration-300 z-50 ${
+        showNavbar ? 'translate-y-0' : '-translate-y-full'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto text-neutral-400 flex items-center justify-center h-16 space-x-10 bg-black/80 backdrop-blur">
+        {['Introduction', 'Resources', 'Innovation', 'Participate', 'FAQs'].map((item) => (
+          <div
+            key={item}
+            className="hover:text-white cursor-pointer transition-colors duration-200"
+          >
+            {item}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default Navbar;

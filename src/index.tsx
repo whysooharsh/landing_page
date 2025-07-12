@@ -21,10 +21,10 @@ export default function Home() {
             <WebGLBackground />
           </div>
 
-          <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-b from-transparent to-black z-20 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-black z-20 pointer-events-none" />
         </div>
 
-        <div className="relative z-30 flex-1 flex flex-col items-center justify-center gap-10 pb-40">
+        <div className="relative z-30 flex-1 flex flex-col items-center justify-center gap-10 pb-48">
           <h1 className="text-4xl bg-gradient-to-b from-white to-gray-400 bg-clip-text sm:text-5xl md:text-7xl font-semibold uppercase text-transparent">
             Not just another app
           </h1>
@@ -45,13 +45,18 @@ export default function Home() {
         <span>Scroll Down</span>
         <ScrollDownComponent />
       </div>
-      <section className="bg-black min-h-screen p-8 text-white">
-        <h2>Some text here</h2>
+      <section className="bg-black min-h-screen p-8 flex flex-col items-center text-white text-center mt-40">
+        <h2 className="font-poppins text-4xl pb-4">What is Second Brain?</h2>
+        <p className="max-w-3xl text-lg leading-relaxed ">A Second Brain is a trusted external system for organizing and storing your thoughts, ideas, tasks, and knowledge, so you can think more clearly,
+          create more effectively, and focus on what truly matters.
+          It acts as an extension of your mind, helping you capture insights,
+          reflect with intention, and make better decisions without mental overload.</p>
+      </section>
+              
+      <section className="bg-neutral-950 min-h-screen p-8  text-white">
+        
       </section>
 
-      <section className="bg-zinc-900 min-h-screen p-8 text-white">
-        <h2>Another Random text</h2>
-      </section>
 
     </div>
   );
