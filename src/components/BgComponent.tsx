@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
+// picked up this from codepen 
+
 const WebGLBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 

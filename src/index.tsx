@@ -9,6 +9,7 @@ export default function Home() {
       <div className="fixed inset-0 z-0">
         <div className="rotate-47 absolute origin-center scale-100" style={{ width: '141.42%', height: '150%', left: '-20%', top: '25%' }} >
           <WebGLBackground/>
+          {/* from codepen */}
         </div>
       </div>
 
