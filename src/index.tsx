@@ -19,8 +19,8 @@ export default function Home() {
               left: '-20%',
               top: '25%',
             }}
-          > 
-            <FloatingOrbs/>
+          >
+            <FloatingOrbs />
             <WebGLBackground />
           </div>
 
@@ -49,7 +49,7 @@ export default function Home() {
 
       </section>
 
-      <section className="bg-black min-h-screen p-8 flex flex-col items-center text-white text-center">
+      <section className="bg-black min-h-screen p-8 flex flex-col items-center text-white text-center pt-60">
         <h2 className="text-4xl pb-4 pt-20">What is Second Brain?</h2>
         <p className="max-w-3xl text-lg leading-relaxed text-center">
           <span className="inline-block bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent">
@@ -61,40 +61,48 @@ export default function Home() {
         </p>
 
         <div className="flex items-center justify-center p-6 mt-8">
-          <button className="relative inline-flex h-12 w-36 overflow-hidden rounded-full p-[2px] group cursor-pointer">
-            <span
-              className="absolute inset-[-200%] animate-[spin_1.6s_linear_infinite] bg-[conic-gradient(from_0deg_at_50%_50%,transparent_0%,rgba(255,255,255,0.9)_100%,transparent_100%)]"
-            />
-            <span className="relative inline-flex h-full w-full items-center justify-center rounded-full bg-zinc-900 text-[14px] font-medium text-white backdrop-blur-md transition-all duration-300">
-              Get Started
-            </span>
+          <button className="group relative bg-transparent border border-gray-600 hover:border-gray-500 text-white px-6 py-3 rounded-full transition-all duration-300 ">
+            <span className="text-base md:text-lg font-medium">Get Started</span>
+            <div className="absolute inset-0 border border-gray-900 rounded-sm opacity-0  transition-opacity duration-300"></div>
           </button>
         </div>
 
-            <div className="min-h-screen pt-40">
-               <div className="grid grid-cols-2 gap-12">
-                <div className="h-72 lg:w-[40rem] rounded-3xl border-4 bg-red-800 ">
-                  1
-                </div> 
-                <div className="h-72 lg:w-[40rem] rounded-3xl border-4 bg-red-800">
-                  2
-                </div>
-                <div className="h-72 lg:w-[40rem] rounded-3xl border-4 bg-red-800"> 
-                  3
-                </div>
-                <div className="h-72 lg:w-[40rem] rounded-3xl border-4 bg-red-800">
-                  4
-                </div>
-               </div>
+        <div className="min-h-screen pt-80">
+          <div className="grid grid-cols-2 gap-12">
+            <div className="relative h-72 lg:w-[40rem] rounded-3xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-gray-400 opacity-50"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-400 opacity-50"></div>
+              <div className="absolute inset-[1px] rounded-3xl bg-black"></div>
+              <div className="relative z-10 p-6 text-white">Your content here</div>
             </div>
+            <div className="relative h-72 lg:w-[40rem] rounded-3xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-gray-400 opacity-50"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-400 opacity-50"></div>
+              <div className="absolute inset-[1px] rounded-3xl bg-black"></div>
+              <div className="relative z-10 p-6 text-white">Your content here</div>
+            </div>
+            <div className="relative h-72 lg:w-[40rem] rounded-3xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-gray-400 opacity-50"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-gray-400 opacity-50"></div>
+              <div className="absolute inset-[1px] rounded-3xl bg-black"></div>
+              <div className="relative z-10 p-6 text-white">Your content here</div>
+            </div>
+            <div className="relative h-72 lg:w-[40rem] rounded-3xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-gray-400 opacity-50"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-gray-400 opacity-50"></div>
+              <div className="absolute inset-[1px] rounded-3xl bg-black"></div>
+              <div className="relative z-10 p-6 text-white">Your content here</div>
+            </div>
+          </div>
+        </div>
 
-       
+
       </section>
 
-      {/* <section className="bg-black min-h-screen p-8 text-white">
+      <section className="bg-black min-h-screen p-8 text-white pt-60">
         <h2 className="text-4xl text-center pt-20">content section</h2>
-      </section> */}
-        <Footer/>
+      </section>
+      <Footer />
     </div>
   );
 }
