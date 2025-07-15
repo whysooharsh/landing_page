@@ -1,4 +1,5 @@
 import WebGLBackground from "./components/BgComponent";
+import FloatingOrbs from "./components/Floatingorbs";
 import Footer from "./components/Footer";
 import ScrollDownComponent from "./components/Scrolldown";
 import './index.css';
@@ -18,7 +19,8 @@ export default function Home() {
               left: '-20%',
               top: '25%',
             }}
-          >
+          > 
+            <FloatingOrbs/>
             <WebGLBackground />
           </div>
 
@@ -68,11 +70,30 @@ export default function Home() {
             </span>
           </button>
         </div>
+
+            <div className="min-h-screen pt-40">
+               <div className="grid grid-cols-2 gap-12">
+                <div className="h-72 lg:w-[40rem] rounded-3xl border-4 bg-red-800 ">
+                  1
+                </div> 
+                <div className="h-72 lg:w-[40rem] rounded-3xl border-4 bg-red-800">
+                  2
+                </div>
+                <div className="h-72 lg:w-[40rem] rounded-3xl border-4 bg-red-800"> 
+                  3
+                </div>
+                <div className="h-72 lg:w-[40rem] rounded-3xl border-4 bg-red-800">
+                  4
+                </div>
+               </div>
+            </div>
+
+       
       </section>
 
-      <section className="bg-neutral-950 min-h-screen p-8 text-white">
-        <h2 className="text-4xl text-center pt-20">More Content Here</h2>
-      </section>
+      {/* <section className="bg-black min-h-screen p-8 text-white">
+        <h2 className="text-4xl text-center pt-20">content section</h2>
+      </section> */}
         <Footer/>
     </div>
   );
