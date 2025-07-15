@@ -3,7 +3,6 @@ import React from 'react';
 const Footer: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative">
-      <div className="absolute right-0 top-0 w-96 h-96 bg-gradient-to-br from-gray-600/20 via-gray-600/20 to-transparent rounded-full blur-3xl transform translate-x-32 -translate-y-32"></div>
       <div className="relative z-10 flex flex-col min-h-screen pl-20">
         <div className="flex-1 flex flex-col justify-center md:px-16 lg:px-20 max-w-4xl">
           <div className="mb-6">
@@ -12,7 +11,7 @@ const Footer: React.FC = () => {
             </p>
           </div>
           <div className="mb-10">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-light leading-tight mb-4">
+            <h1 className="text-3xl md:text-xl lg:text-5xl font-light leading-tight mb-4">
               START YOUR JOURNEY
             </h1>
             <h2 className="text-6xl md:text-8xl lg:text-[240px] font-medium bg-gradient-to-r from-gray-400 via-gray-500 to-gray-700 bg-clip-text text-transparent leading-none -ml-2 lg:-ml-4">
