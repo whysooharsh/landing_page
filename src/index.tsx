@@ -1,4 +1,5 @@
 import WebGLBackground from "./components/BgComponent";
+import Footer from "./components/Footer";
 import ScrollDownComponent from "./components/Scrolldown";
 import './index.css';
 
@@ -72,7 +73,7 @@ export default function Home() {
       <section className="bg-neutral-950 min-h-screen p-8 text-white">
         <h2 className="text-4xl text-center pt-20">More Content Here</h2>
       </section>
-
+        <Footer/>
     </div>
   );
 }
